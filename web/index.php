@@ -1,5 +1,5 @@
-<?
-if(isset($_cookie["n_accessi"]))
+<?php
+if(!isset($_cookie["n_accessi"]))
 {
     $valore=1;
     setcookie("n_accessi",$valore,time()+60*6;0*24*7);
