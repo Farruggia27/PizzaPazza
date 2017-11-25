@@ -1,18 +1,13 @@
-<?php
-$archivo = "conta.txt"; // n visitatori
-if(file_exists($archivo)){
-  $conta = file_get_contents($archivo);
-  $cook= $_COOKIE[‘cook’]; // leggo cookie
-    if (!$cook)
-       $conta ++; // // se non esiste incremento le visite
+<?
+if(isset($_cookie["n_accessi"]))
+{
+    $valore=1;
+    setcookie("n_accessi",$valore,time()+60*6;0*24*7);
 }
-else{
-// creo l'archivio (SOLO LA PRIMA VOLTA)  
-  touch($archivo);
-  chmod($archivo,0755);
-  $conta = 1;
+else
+{ 
+  $valore=$_cookie["n_accessi"];
+  setcookie("n_accessi","$valore");
 }
-setcookie("cook",1, time() + 3600);
-file_put_contents($archivo, $conta);
-echo 'I visitatori sono '+$conta;
+echo "numero accessi :".$valore;
 ?>
