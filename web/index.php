@@ -5,7 +5,7 @@
 	</head>
 	<body>
 	<?php
-		$n=30;
+		$n=120;
 		$citta="bergamo";
 		$richiesta="bar";
 		# questo script chiama un'API e la inserisce in una tabella 
@@ -28,8 +28,8 @@
 				echo "<th>Longitudine</th>";
 			echo "</tr>";
 			for($i=0; $i<$n; $i++)
-			{	
-				echo "<tr>";
+			{	$cont=1;
+				echo "<tr>".$cont." ";
 					echo "<td>";
 					echo $jcode->response->venues[$i]->name;
 					echo "</td>";
@@ -39,6 +39,7 @@
 					echo "<td>";
 					echo $jcode->response->venues[$i]->location->lng;
 					echo "</td>";
+			 	$cont=$cont+1;
 				echo "</tr>";
 			}
 		echo "</table>";
