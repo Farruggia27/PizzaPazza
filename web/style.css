@@ -31,11 +31,13 @@ th {
   vertical-align:middle;
 }
 tr {
-   color:#005500;
-   background:white;
+  color:#005500;
+  background:white;
   font-size:20px;
   font-weight: 100;
   padding:10px;
   text-align:left;
   vertical-align:middle;
+  width:10px;
+  height:10px;
 }
