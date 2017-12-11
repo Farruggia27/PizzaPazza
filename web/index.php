@@ -24,12 +24,16 @@
 		echo "<table>";
 			echo "<tr>";
 				echo "<th>Nome Pizzeria</th>";
+				echo "<th>Nome Pizzeria</th>";
 				echo "<th>Latitudine</th>";
 				echo "<th>Longitudine</th>";
 			echo "</tr>";
 			for($i=0; $i<$n; $i++)
 			{	$cont=1;
-				echo "<tr>".$cont." ";
+				echo "<tr>";
+			 		echo "<td>";
+					echo $cont;
+					echo "</td>";
 					echo "<td>";
 					echo $jcode->response->venues[$i]->name;
 					echo "</td>";
