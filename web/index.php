@@ -7,10 +7,10 @@
 	   <?php
 		$n=30;
 		$citta="bergamo";
-		$richiedi="pizzeria";
+		$richiesta="pizzeria";
 		
 		# indirizzo foursquare con proprie credenziali
-		$fourpage="https://api.foursquare.com/v2/venues/search?v=20161016&query=$richiedi&nit=$n&intent=checkin&client_id=X1GECFVKCU11GJRVBGXCRU0EYKOLTQCLDIIC4RPN2GN2ESLE&client_secret=Y2AXOQKNIL1BJJ1UWUDNLXOTME0D3310Y0XLQDP52HUEZPS5&near=$citta";
+		$fourpage="https://api.foursquare.com/v2/venues/search?v=20161016&query=$richiesta&nit=$n&intent=checkin&client_id=X1GECFVKCU11GJRVBGXCRU0EYKOLTQCLDIIC4RPN2GN2ESLE&client_secret=Y2AXOQKNIL1BJJ1UWUDNLXOTME0D3310Y0XLQDP52HUEZPS5&near=$citta";
 		
 		$memorizza = curl_init() or die(curl_error());	# Memorizza l'api nella variabile $json
 		curl_setopt($memorizza, CURLOPT_URL,$fourpage);
