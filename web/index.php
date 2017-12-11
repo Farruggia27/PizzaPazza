@@ -7,7 +7,7 @@
 	<?php
 		$n=10;
 		$citta="bergamo";
-		$richiesta="bar";
+		$richiesta="pizzeria";
 		# questo script chiama un'API e la inserisce in una tabella 
 		# Indirizzo dell'API da richiedere
 		$fourpage="https://api.foursquare.com/v2/venues/search?v=20161016&query=$richiesta&nit=$n&intent=checkin&client_id=X1GECFVKCU11GJRVBGXCRU0EYKOLTQCLDIIC4RPN2GN2ESLE&client_secret=Y2AXOQKNIL1BJJ1UWUDNLXOTME0D3310Y0XLQDP52HUEZPS5&near=$citta";
