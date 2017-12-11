@@ -5,7 +5,7 @@
 	</head>
 	<body>
 	<?php
-		$n=200;
+		$n=30;
 		$citta="bergamo";
 		$richiesta="pizzeria";
 		# questo script chiama un'API e la inserisce in una tabella 
