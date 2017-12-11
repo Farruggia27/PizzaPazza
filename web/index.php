@@ -29,10 +29,10 @@
 				echo "<th>Longitudine</th>";
 			echo "</tr>";
 			for($i=0; $i<$n; $i++)
-			{	$cont=1;
+			{	
 				echo "<tr>";
 			 		echo "<td>";
-					echo $cont;
+					echo $i+1;
 					echo "</td>";
 					echo "<td>";
 					echo $jcode->response->venues[$i]->name;
@@ -43,7 +43,6 @@
 					echo "<td>";
 					echo $jcode->response->venues[$i]->location->lng;
 					echo "</td>";
-			 	$cont=$cont+1;
 				echo "</tr>";
 			}
 		echo "</table>";
