@@ -24,8 +24,6 @@ div.table-title h3 {
 th {
   color:white;
   background:#005500;
-  border-bottom:1px solid;
-  border-right: 1px solid;
   font-size:20px;
   font-weight: 100;
   padding:20px;
@@ -34,5 +32,7 @@ th {
 }
 tr {
    color:#005500;
-  background:white;
+   background:white;
+   font-size:20px;
+   font-weight:100;
 }
