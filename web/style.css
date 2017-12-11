@@ -1,24 +1,22 @@
 body {
   background-color: #00cc66;
   font-family: "Times New Roman", Georgia, Serif;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 350;
-  text-rendering: optimizeLegibility;
 }
 
 div.table-title h3 {
    color: #00aa66;
-   font-size: 30px;
+   font-size: 25px;
    font-weight: 350;
    font-family: "Times New Roman", Georgia, Serif;
 }
 
 .table-fill {
   background: white;
-  border-radius:3px;
-  height: 320px;
+  height: 300px;
   margin: auto;
-  max-width: 600px;
+  max-width: 500px;
   width: 100%;
 }
 
