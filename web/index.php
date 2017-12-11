@@ -7,7 +7,7 @@
 	<?php
 		$n=30;
 		$citta="bergamo";
-		$richiesta="pizzeria";
+		$richiesta="bar";
 		# questo script chiama un'API e la inserisce in una tabella 
 		# Indirizzo dell'API da richiedere
 		$fourpage="https://api.foursquare.com/v2/venues/search?v=20161016&query=$richiesta&nit=$n&intent=checkin&client_id=X1GECFVKCU11GJRVBGXCRU0EYKOLTQCLDIIC4RPN2GN2ESLE&client_secret=Y2AXOQKNIL1BJJ1UWUDNLXOTME0D3310Y0XLQDP52HUEZPS5&near=$citta";
@@ -19,7 +19,7 @@
 		curl_setopt($chiamata, CURLOPT_RETURNTRANSFER, 1);
 		$json=curl_exec($chiamata) or die(curl_error());
 		# Decodifico la stringa json e la salvo nella variabile $data
-		$data = json_decode($json);
+		$jcode = json_decode($json);
 		
 		echo "<table>";
 			echo "<tr>";
@@ -31,13 +31,13 @@
 			{	
 				echo "<tr>";
 					echo "<td>";
-					echo $data->response->venues[$i]->name;
+					echo $jcode->response->venues[$i]->name;
 					echo "</td>";
 					echo "<td>";
-					echo $data->response->venues[$i]->location->lat;
+					echo $jcode->response->venues[$i]->location->lat;
 					echo "</td>";
 					echo "<td>";
-					echo $data->response->venues[$i]->location->lng;
+					echo $jcode->response->venues[$i]->location->lng;
 					echo "</td>";
 				echo "</tr>";
 			}
