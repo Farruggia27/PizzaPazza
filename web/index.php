@@ -5,17 +5,17 @@
 	</head>
 	<body>
 	<?php
-		$n=50;
+		$n=200;
 		$citta="bergamo";
 		$richiesta="pizzeria";
 		# questo script chiama un'API e la inserisce in una tabella 
 		# Indirizzo dell'API da richiedere
-		$indirizzo_pagina="https://api.foursquare.com/v2/venues/search?v=20161016&query=$richiesta&nit=$n&intent=checkin&client_id=XTT32MSNDEPOVNS4SCCQEEHT4JJXB3P12AXWR50GNM4KUN1Q&client_secret=FIWH4MQRDDMZH4ZDWFD2XXAEXXTJXMN1SMMFRARQAKBX2L5N&near=$citta";
+		$fourpage="https://api.foursquare.com/v2/venues/search?v=20161016&query=$richiesta&nit=$n&intent=checkin&client_id=X1GECFVKCU11GJRVBGXCRU0EYKOLTQCLDIIC4RPN2GN2ESLE&client_secret=Y2AXOQKNIL1BJJ1UWUDNLXOTME0D3310Y0XLQDP52HUEZPS5&near=$citta";
 		# Codice di utilizzo di cURL
 		# chiama l'API e la immagazzina in $json
 		
 		$chiamata = curl_init() or die(curl_error());
-		curl_setopt($chiamata, CURLOPT_URL,$indirizzo_pagina);
+		curl_setopt($chiamata, CURLOPT_URL,$fourpage);
 		curl_setopt($chiamata, CURLOPT_RETURNTRANSFER, 1);
 		$json=curl_exec($chiamata) or die(curl_error());
 		# Decodifico la stringa json e la salvo nella variabile $data
@@ -23,9 +23,9 @@
 		
 		echo "<table>";
 			echo "<tr>";
-				echo "<th>PIZZERIA</th>";
-				echo "<th>LATITUDINE</th>";
-				echo "<th>LONGITUDINE</th>";
+				echo "<th>Nome Pizzeria</th>";
+				echo "<th>Latitudine</th>";
+				echo "<th>Longitudine</th>";
 			echo "</tr>";
 			for($i=0; $i<$n; $i++)
 			{	
