@@ -6,7 +6,7 @@
 	<body>
 		<?php
 			$n=30;
-			$citta="Novi Ligure";
+			$citta="bergamo";
 			$richiesta="pizzeria";
 		
 			# indirizzo foursquare con proprie credenziali
